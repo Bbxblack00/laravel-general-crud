@@ -11,26 +11,6 @@
     gli elementi cardine di tutti i passaggi principali,
     eventualmente chiedendo se qualcosa non vi e' chiaro --}}
 
-    @foreach ($workers as $worker)
-
-    <div class="row">
-        <a href="{{ route ('employee', $worker -> id) }}">
-            [{{ $worker -> id }}] -> {{ $worker -> firtsname }} {{ $worker -> lastname }}
-        </a>
-        <a href="{{ route('edit', $worker -> id) }}"><i class="fas fa-pen"></i></a>
-        <a href="{{ route('destroy', $worker -> id) }}"><i class="fas fa-user-minus"></i></a>
-    </div>
-        
-    @endforeach
-
-    <div class="row">
-        <a href="{{ route('create') }}">
-            <button class="button">
-                New Worker
-            </button>
-        </a>
-    </div>
-
-    {{-- <h1>HELLO</h1> --}}
+    <h1>HELLO</h1>
     
 @endsection

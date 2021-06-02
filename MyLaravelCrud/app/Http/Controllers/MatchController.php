@@ -9,6 +9,6 @@ class MatchController extends Controller
 {
     public function home(){
 
-        return view('pages.home', compact());
+        return view('pages.home');
     }
 }
