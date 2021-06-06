@@ -23,4 +23,9 @@ class MatchController extends Controller
         return view('pages.match', compact('match'));
     }
 
+    public function create(){
+
+        return view('pages.create');
+    }
+
 }

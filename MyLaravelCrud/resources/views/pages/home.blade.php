@@ -22,14 +22,14 @@
 
         </a>
         
+        
+        @endforeach
+        
         <a href="{{ route('create') }}">
             <button>
                 CREATE
             </button>
         </a>
-
-    @endforeach
-
-    {{-- <h1>HELLO</h1> --}}
-    
+        {{-- <h1>HELLO</h1> --}}
+        
 @endsection
