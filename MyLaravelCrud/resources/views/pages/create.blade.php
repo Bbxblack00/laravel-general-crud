@@ -3,7 +3,7 @@
 @section('principal')
 
 
-<h1>NEW WORKER</h1>
+<h1>NEW MATCH</h1>
 <form method="POST" action="{{ route('store') }}">
     
     @csrf
