@@ -12,13 +12,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// {{ route('store') }}
+// 
 
 Route::get('/', 'MatchController@home')
     -> name('home');
 
+
 Route::get('/match/{id}', 'MatchController@single')
     -> name('single');
 
-Route::get('/create', 'MatchController@create')
+
+Route::get('/create/worker/', 'MatchController@create')
     -> name('create');
+
+
+Route::get('/edit/{id}', 'MatchController@edit')
+    -> name('edit');
+
+
+Route::post('update/worker/{id}', 'MatchController@update')
+    -> name('update');
+
+
+Route::post('/store/worker/', 'MatchController@store')
+    -> name('store');
+
+
+Route::get('/destroy/{id}', 'MatchController@destroy')
+    -> name('destroy');
