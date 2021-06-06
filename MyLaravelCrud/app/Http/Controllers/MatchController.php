@@ -9,6 +9,10 @@ class MatchController extends Controller
 {
     public function home(){
 
+        $matches = Match::all();
+
+        dd($matches);
+
         return view('pages.home');
     }
 }

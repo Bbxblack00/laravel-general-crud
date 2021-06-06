@@ -12,6 +12,6 @@ class MatchesSeeder extends Seeder
      */
     public function run()
     {
-        factory(Worker::class, 20) -> create();
+        factory(Match::class, 20) -> create();
     }
 }
