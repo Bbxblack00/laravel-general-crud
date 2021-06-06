@@ -15,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MatchController@home')
     -> name('home');
+
+Route::get('/match/{id}', 'MatchController@single')
+    -> name('single');
+
+Route::get('/create', 'MatchController@create')
+    -> name('create');

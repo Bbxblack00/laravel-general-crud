@@ -11,6 +11,25 @@
     gli elementi cardine di tutti i passaggi principali,
     eventualmente chiedendo se qualcosa non vi e' chiaro --}}
 
-    <h1>HELLO</h1>
+
+    @foreach ($matches as $match)
+
+        <a href="{{ route('single', $match -> id) }}" class="space">
+            
+            <p>
+               {{ $match -> id }} - {{ $match -> team1 }} ||  {{ $match -> team2 }}
+            </p>
+
+        </a>
+        
+        <a href="{{ route('create') }}">
+            <button>
+                CREATE
+            </button>
+        </a>
+
+    @endforeach
+
+    {{-- <h1>HELLO</h1> --}}
     
 @endsection

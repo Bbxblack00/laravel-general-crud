@@ -11,8 +11,16 @@ class MatchController extends Controller
 
         $matches = Match::all();
 
-        dd($matches);
+        // dd($matches);
 
-        return view('pages.home');
+        return view('pages.home', compact('matches'));
     }
+
+    public function single($id){
+
+        $match = Match::findOrFail($id);
+
+        return view('pages.match', compact('match'));
+    }
+
 }
