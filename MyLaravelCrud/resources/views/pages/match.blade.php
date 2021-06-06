@@ -20,6 +20,22 @@
 
     <h2 class="space">{{ $match -> point1 }} <-> {{ $match -> point2 }}</h2>
 
+    <div class="cnt-brd">
+        <a href="{{ route('edit', $match -> id) }}">
+            <button>
+                Modify
+            </button>
+        </a>
+    </div>
+
+    <div class="cnt-brd">
+        <a href="{{ route('destroy', $match -> id) }}">
+            <button>
+                Delete
+            </button>
+        </a>
+    </div>
+
     
     
 @endsection

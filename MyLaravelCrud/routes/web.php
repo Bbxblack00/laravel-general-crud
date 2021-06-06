@@ -19,10 +19,10 @@ Route::get('/', 'MatchController@home')
 
 
 Route::get('/match/{id}', 'MatchController@single')
-    -> name('single');
+    -> name('match');
 
 
-Route::get('/create/worker/', 'MatchController@create')
+Route::get('/create/match/', 'MatchController@create')
     -> name('create');
 
 
@@ -30,11 +30,11 @@ Route::get('/edit/{id}', 'MatchController@edit')
     -> name('edit');
 
 
-Route::post('update/worker/{id}', 'MatchController@update')
+Route::post('update/match/{id}', 'MatchController@update')
     -> name('update');
 
 
-Route::post('/store/worker/', 'MatchController@store')
+Route::post('/store/match/', 'MatchController@store')
     -> name('store');
 
 

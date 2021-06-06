@@ -9,32 +9,37 @@
         @csrf
         @method('POST')
 
-        {{-- nome --}}
+        {{-- team1 --}}
         <div class="row">
-            <label for="firstname" class="inp-wrk">Firstname:</label>
-            <input type="text" name="firstname" class="inp-wrk" value="{{ $match ->  }}">
+            <label for="team1" class="inp-wrk">Team 1:</label>
+            <input type="text" name="team1" class="inp-wrk">
         </div>
-        {{-- cognome --}}
+        {{-- team2 --}}
         <div class="row">
-            <label for="Lastname" class="inp-wrk">Lastname:</label>
-            <input type="text" name="lastname" class="inp-wrk" value="{{ $match ->  }}">
+            <label for="team2" class="inp-wrk">Team 2:</label>
+            <input type="text" name="team2" class="inp-wrk">
         </div>
-        {{-- ruolo --}}
+        {{-- point1 --}}
         <div class="row">
-            <label for="role" class="inp-wrk">Ruolo:</label>
-            <input type="text" name="role" class="inp-wrk" value="{{ $match ->  }}">
+            <label for="point1" class="inp-wrk">Point 1:</label>
+            <input type="text" name="point1" class="inp-wrk">
         </div>
-        {{-- ral --}}
+        {{-- point2 --}}
         <div class="row">
-            <label for="ral" class="inp-wrk">Ral:</label>
-            <input type="text" name="ral" class="inp-wrk" value="{{ $match -> }}">
+            <label for="point2" class="inp-wrk">Point 2:</label>
+            <input type="text" name="point2" class="inp-wrk">
         </div>
-
+        {{-- result --}}
+        <div class="row">
+            <label for="result" class="inp-wrk">Result:</label>
+            <input type="text" name="result" class="inp-wrk">
+        </div>
+    
         <div class="row">
             <button class="bnt">
-                UPDATE
+                CONFIRM
             </button>
-        </div>  
+        </div>
     </form>
 
 

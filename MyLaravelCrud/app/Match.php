@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Match extends Model
 {
     protected $table = 'matches';
-    protected $filleble = [
+    protected $fillable = [
         'team1',
         'team2',
         'point1',

@@ -14,7 +14,7 @@
 
     @foreach ($matches as $match)
 
-        <a href="{{ route('single', $match -> id) }}" class="space">
+        <a href="{{ route('match', $match -> id) }}" class="space">
             
             <p>
                {{ $match -> id }} - {{ $match -> team1 }} ||  {{ $match -> team2 }}

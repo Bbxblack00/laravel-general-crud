@@ -33,24 +33,27 @@ class MatchController extends Controller
         $match = Match::findOrFail($id);
 
 
-        return view('pages.edit', compact('worker'));
+        return view('pages.edit', compact('match'));
     }
 
-    // public function update(Request $request, $id) {
+    public function update(Request $request, $id) {
 
-    //     $validate = $request -> validate([
-    //         'firstname' => 'max:128',
-    //         'lastname' => 'max:128',
-    //         'role' => 'max:5|min:1|numeric',
-    //         'rol' => 'nullable|max:90000|min:15000|numeric'
-    //     ]);
+        $validate = $request -> validate([
+        'team1' => 'max:128|min:1',
+        'team2' => 'max:128|min:1',
+        'point1' => 'max:20|min:0|numeric',
+        'point2' => 'max:20|min:0|numeric',
+        'result' => 'max:1|min:0|numeric',
+    ]);
 
-    //     $worker = Worker::findOrFail($id);
+        $match = Match::findOrFail($id);
 
-    //     $worker = update($validate);
+        $match = update($validate);
 
-    //     return redirect() -> route('home');
-    // }
+        return redirect() -> route('home');
+    }
+
+
 
     public function store(Request $request) {
 
@@ -64,15 +67,17 @@ class MatchController extends Controller
 
         // dd($request -> all());
 
-        $Match = Match::create($validate);
+        $match = Match::create($validate);
         return redirect() -> route('match', $match -> id);
     }
 
-    public function destroy($workerid) {
 
-        $worker = Worker::findOrFail($workerid);
 
-        $worker -> delete();
+    public function destroy($id) {
+
+        $match = Match::findOrFail($id);
+
+        $match -> delete();
 
         return redirect() -> route('home');
     }
